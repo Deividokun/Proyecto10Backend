@@ -1,0 +1,75 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: white;
+  height: 15vh;
+  box-shadow: 0px 29px 6px -30px #898989;
+  display: flex;
+  justify-content: space-around; /* Alinea logo a la izquierda y nav a la derecha */
+  align-items: center; /* Centra verticalmente */
+  padding: 0 20px; /* Agrega un poco de espacio a los lados */
+}
+p {
+  font-weight: 900;
+}
+header img {
+  width: 150px;
+  height: 100px;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+main {
+  padding-top: 10vh;
+}
+
+nav {
+  display: flex;
+  gap: 20px; /* Añade espacio entre los enlaces */
+}
+
+nav a {
+  font-size: 20px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #b71d09;
+  transform: scale(1.1);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 500px) {
+  header {
+    flex-direction: column; /* Coloca logo y nav en columnas */
+    height: auto; /* Permite que el header se ajuste al contenido */
+    padding: 10px; /* Reduce el padding para dispositivos pequeños */
+  }
+
+  header img {
+    width: 120px; /* Reduce el tamaño del logo */
+    height: auto;
+    margin-bottom: 10px; /* Espacio entre logo y nav */
+  }
+
+  nav {
+    flex-direction: row; /* Coloca los enlaces de navegación en una columna */
+    gap: 15px; /* Reduce el espacio entre los enlaces */
+  }
+
+  nav a {
+    font-size: 18px; /* Ajusta el tamaño de los enlaces */
+  }
+
+  main {
+    padding-top: 12vh; /* Ajusta el espacio superior en relación al header */
+  }
+}
